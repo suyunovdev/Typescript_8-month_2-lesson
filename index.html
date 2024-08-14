@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student app in Typescript</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container mt-4">
+      <!-- Header Section -->
+      <div class="header mb-4">
+        <div class="search mb-3">
+          <input
+            type="text"
+            class="form-control"
+            id="searchFirstName"
+            placeholder="Search by First Name.." />
+          <input
+            type="text"
+            class="form-control mt-2"
+            id="searchLastName"
+            placeholder="Search by Last Name.." />
+        </div>
+        <select name="position" id="selectPosition" class="form-select mb-3">
+          <option value="">Select Position</option>
+          <option value="React">React</option>
+          <option value="Nodejs">Nodejs</option>
+          <option value="Go">Go</option>
+          <option value="Python">Python</option>
+        </select>
+        <select name="address" id="selectAddress" class="form-select mb-3">
+          <option value="">Select Address</option>
+          <option value="Toshkent">Toshkent</option>
+          <option value="Surxondaryo">Surxondaryo</option>
+          <option value="Qashqadaryo">Qashqadaryo</option>
+          <option value="Xorazm">Xorazm</option>
+          <option value="Sirdaryo">Sirdaryo</option>
+          <option value="Samarqand">Samarqand</option>
+          <option value="Jizzax">Jizzax</option>
+          <option value="Buxoro">Buxoro</option>
+          <option value="Namangan">Namangan</option>
+          <option value="Nukus">Nukus</option>
+          <option value="Fargona">Fargona</option>
+        </select>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal">
+          Qoshish
+        </button>
+
+        <!-- Modal for Adding/Updating Data -->
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  New Entry
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="addForm">
+                  <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="lastName" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" />
+                  </div>
+                  <div class="mb-3">
+                    <label for="address" class="form-label">Address</label>
+                    <select name="address" id="address" class="form-select">
+                      <option value="">Select Address</option>
+                      <option value="Toshkent">Toshkent</option>
+                      <option value="Samarqand">Samarqand</option>
+                      <option value="Jizzax">Jizzax</option>
+                      <option value="Buxoro">Buxoro</option>
+                      <option value="Namangan">Namangan</option>
+                      <option value="Nukus">Nukus</option>
+                      <option value="Fargona">Fargona</option>
+                    </select>
+                  </div>
+                  <div class="mb-3 d-flex gap-2">
+                    <div class="flex-fill">
+                      <label for="dob" class="form-label">Date of Birth</label>
+                      <input type="date" class="form-control" id="dob" />
+                    </div>
+                    <div class="flex-fill">
+                      <label for="position" class="form-label">Position</label>
+                      <select name="position" id="position" class="form-select">
+                        <option value="">Select Position</option>
+                        <option value="React">React</option>
+                        <option value="Nodejs">Nodejs</option>
+                        <option value="Go">Go</option>
+                        <option value="Python">Python</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="mb-3 d-flex gap-2">
+                    <div class="flex-fill">
+                      <label for="jobTitle" class="form-label">Job Title</label>
+                      <select name="jobTitle" id="jobTitle" class="form-select">
+                        <option value="">Select Job Title</option>
+                        <option value="Junior">Junior</option>
+                        <option value="Middle">Middle</option>
+                        <option value="Senior">Senior</option>
+                      </select>
+                    </div>
+                    <div class="flex-fill">
+                      <label for="salary" class="form-label">Salary</label>
+                      <input type="number" class="form-control" id="salary" />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <input type="checkbox" id="married" />
+                    <label for="married" class="form-label">Married?</label>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal">
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary" id="submitBtn">
+                  Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table for Displaying Data -->
+      <div class="footer">
+        <table class="table table-striped" id="dataTable">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Address</th>
+              <th>Date of Birth</th>
+              <th>Position</th>
+              <th>Job Title</th>
+              <th>Job Description</th>
+              <th>Salary</th>
+              <th>Married?</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data rows will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script src="./dist/main.js"></script>
+  </body>
+</html>
