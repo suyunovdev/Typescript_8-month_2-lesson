@@ -13,9 +13,8 @@
   </head>
   <body>
     <div class="container mt-4">
-      <!-- Header Section -->
-      <div class="header mb-4">
-        <div class="search mb-3">
+      <div class="header">
+        <div class="search">
           <input
             type="text"
             class="form-control"
@@ -23,40 +22,42 @@
             placeholder="Search by First Name.." />
           <input
             type="text"
-            class="form-control mt-2"
+            class="form-control"
             id="searchLastName"
             placeholder="Search by Last Name.." />
         </div>
-        <select name="position" id="selectPosition" class="form-select mb-3">
-          <option value="">Select Position</option>
-          <option value="React">React</option>
-          <option value="Nodejs">Nodejs</option>
-          <option value="Go">Go</option>
-          <option value="Python">Python</option>
-        </select>
-        <select name="address" id="selectAddress" class="form-select mb-3">
-          <option value="">Select Address</option>
-          <option value="Toshkent">Toshkent</option>
-          <option value="Surxondaryo">Surxondaryo</option>
-          <option value="Qashqadaryo">Qashqadaryo</option>
-          <option value="Xorazm">Xorazm</option>
-          <option value="Sirdaryo">Sirdaryo</option>
-          <option value="Samarqand">Samarqand</option>
-          <option value="Jizzax">Jizzax</option>
-          <option value="Buxoro">Buxoro</option>
-          <option value="Namangan">Namangan</option>
-          <option value="Nukus">Nukus</option>
-          <option value="Fargona">Fargona</option>
-        </select>
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal">
-          Qoshish
-        </button>
+        <div class="kotta">
+          <select name="position" id="selectPosition" class="form-select">
+            <option value="">Select Position</option>
+            <option value="React">React</option>
+            <option value="SMM">SMM</option>
+            <option value="Flutter">Flutter</option>
+            <option value="Python">Python</option>
+            <option value="Nodejs">Nodejs</option>
+          </select>
+          <select name="address" id="selectAddress" class="form-select">
+            <option value="">Select Address</option>
+            <option value="Toshkent">Toshkent</option>
+            <option value="Surxondaryo">Surxondaryo</option>
+            <option value="Qashqadaryo">Qashqadaryo</option>
+            <option value="Xorazm">Xorazm</option>
+            <option value="Sirdaryo">Sirdaryo</option>
+            <option value="Samarqand">Samarqand</option>
+            <option value="Jizzax">Jizzax</option>
+            <option value="Buxoro">Buxoro</option>
+            <option value="Namangan">Namangan</option>
+            <option value="Nukus">Nukus</option>
+            <option value="Fargona">Fargona</option>
+          </select>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Qoshish
+          </button>
+        </div>
 
-        <!-- Modal for Adding/Updating Data -->
         <div
           class="modal fade"
           id="exampleModal"
@@ -108,9 +109,10 @@
                       <select name="position" id="position" class="form-select">
                         <option value="">Select Position</option>
                         <option value="React">React</option>
-                        <option value="Nodejs">Nodejs</option>
-                        <option value="Go">Go</option>
+                        <option value="SMM">SMM</option>
+                        <option value="Flutter">Flutter</option>
                         <option value="Python">Python</option>
+                        <option value="Nodejs">Nodejs</option>
                       </select>
                     </div>
                   </div>
@@ -151,7 +153,6 @@
         </div>
       </div>
 
-      <!-- Table for Displaying Data -->
       <div class="footer">
         <table class="table table-striped" id="dataTable">
           <thead>
@@ -169,9 +170,7 @@
               <th>Actions</th>
             </tr>
           </thead>
-          <tbody>
-            <!-- Data rows will be inserted here -->
-          </tbody>
+          <tbody></tbody>
         </table>
       </div>
     </div>

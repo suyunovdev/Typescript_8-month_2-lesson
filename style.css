@@ -3,17 +3,31 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 .container {
   margin: 0 auto;
   padding: 0 20px;
-}
-
-.header {
   display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* width: 1240px; */
+}
+.header {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
   padding: 10px !important;
+  /* gap: 20px; */
+}
+.search {
+  display: flex;
+  align-items: center;
   gap: 20px;
+  width: 700px;
+  justify-content: space-around;
+}
+input {
+  width: 200px !important;
 }
 
 .search input {
@@ -24,48 +38,58 @@
   outline: none !important;
   width: 300px;
 }
-
 .header select {
   padding: 5px;
   border-radius: 12px !important;
   outline: none !important;
 }
-
 .section {
   display: flex;
   flex-direction: column;
 }
-
 .city select {
   padding: 7px;
   border-radius: 8px !important;
   outline: none !important;
   border: 1px solid #ccc !important;
+
   width: px;
 }
-
 .data input {
   border-radius: 8px !important;
   outline: none !important;
   border: 1px solid #ccc !important;
+
   width: 200px;
 }
-
 .job select {
   padding: 7px;
   border-radius: 8px !important;
   outline: none !important;
   border: 1px solid #ccc !important;
+
   width: 200px;
 }
-
 .money input {
   border-radius: 8px !important;
   outline: none !important;
   border: 1px solid #ccc !important;
+
   width: 230px;
 }
-
 .checbox input {
   margin-right: 10px;
-}/*# sourceMappingURL=style.css.map */
+}
+.btn {
+  margin: 0;
+}
+.kotta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.form-select input {
+  width: 200px;
+}
