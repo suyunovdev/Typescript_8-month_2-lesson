@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 16px;
 }
 .container {
   margin: 0 auto;
@@ -92,4 +93,10 @@ input {
 }
 .form-select input {
   width: 200px;
+}
+.form-control {
+  width: 100% !important;
+}
+#married {
+  width: 20px !important;
 }
